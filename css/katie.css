@@ -1,0 +1,93 @@
+body{
+	background: url('../images/stage002.gif') no-repeat center center fixed;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.katieName0{
+	 color: #ffffff;
+	 font-family: 'Tangerine', serif;
+	 font-size: 84px;
+	 text-shadow: 4px 4px 4px #aaa;
+	 position: absolute;
+	 top:40%;
+	 left: 30%;
+	cursor: pointer;
+ }
+
+
+.imgKatieMain{
+	height: 400px;
+	width: 600px;
+	background-image:url('../images/katieMain1.png');
+	position: absolute;
+	top:-600px;
+	left: 20%;
+}
+
+.navTicket{
+	width:auto;
+	height:auto;
+	position:absolute;
+}
+
+.imgContact0{
+	height: 200px;
+	width: 195px;
+	float: left;
+	position:relative;
+	background-image:url('../images/contact.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: -25px;
+	display: none;
+}
+
+.imgContact1{
+	height: 200px;
+	width: 195px;
+	float: left;
+	position:relative;
+	background-image:url('../images/photos.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: -25px;
+	display: none;
+	 }
+
+.imgContact2{
+	height: 200px;
+	width: 195px;
+	float: left;
+	position:relative;
+	background-image:url('../images/resume.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: -25px;
+	display: none;
+	}
+
+.imgContact3{
+	height: 200px;
+	width: 195px;
+	float: left;
+	position:relative;
+	background-image:url('../images/media.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: -25px;
+	display: none;
+	 }
+
+.start{
+	color: #ffffff;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.test{
+
+}
