@@ -1,0 +1,109 @@
+//imports
+@import "buttons";
+@import "mixinTest";
+@import "extendTest";
+@import "directiveTest";
+@import "mathTest";
+@import "responsiveTest";
+//vars
+$main:#797979;
+
+
+.foo{
+   font-weight: bold;
+   font-size: 10px;
+   font-family: "Arial Black";
+ }
+
+// this is a cosmetic comment
+.bar{
+  font-weight: bold;
+  font-size: 10px;
+  font-family: "Arial Black";
+}
+
+// this comments will not appear
+.btn{
+  color: $main;
+  display:block;
+}
+
+/* this is a comment that will be included */
+ .btn-a{
+   color: lighten($main,30%);
+   &:hover{
+	 color: lighten($main,40%);
+   }
+ }
+
+ .content{
+    border: 1px solid #ccc;
+   padding: 20px;
+   h2{
+	 font-size: 3em;
+	 margin: 20px 0;
+   }
+   p{
+	 font-size: 1.5em;
+	 margin: 15px 0;
+   }
+   .callout{
+	 border-color: red;
+   }
+   &.callout{
+	 border-color: green;
+   }
+ }
+
+ a{
+   color: #999;
+   &:hover{
+	 color: #777;
+   }
+   &:active{
+	 color: #888;
+   }
+ }
+
+ /* do not next unnecessarily */
+
+// not more that 3 levels
+
+ .sidebar{
+   float: right;
+   width: 300px;
+   .users & {
+	 width: 400px;
+   }
+ }
+
+
+ /* **************************************** */
+  // default
+
+$rounded: 5px;
+$rounded: 10px !default;
+
+.btn-b{
+  border-radius: $rounded;
+}
+
+/* variable scope */
+
+
+/* mixins */
+  @mixin button{
+	border: 1px solid #ccc;
+	font-size: 1em;
+	text-transform: uppercase;
+  }
+
+.btn-a{
+  @include button;
+  background: #777;
+}
+
+
+
+
+

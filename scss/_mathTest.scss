@@ -1,0 +1,51 @@
+/* level 6: Math and Color */
+
+// basic arithmatic
+
+//modulo
+
+//color functions
+$color: #333;
+$leftPos: 100px;
+$topPos:100px;
+
+@mixin base($top, $left){
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000000;
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+.lighten{
+  @include base($leftPos, $topPos);
+  background-color:lighten($color, 20%) ;
+  $leftPos: $leftPos + 100;
+}
+
+.darken{
+  @include base($leftPos, $topPos);
+  background-color:darken($color, 20%);
+  $leftPos: $leftPos + 100;
+
+}
+
+.saturate{
+  @include base($leftPos, $topPos);
+  background-color:saturate($color, 20%);
+  $leftPos: $leftPos + 100;
+}
+
+.desaturate{
+  @include base($leftPos, $topPos);
+  background-color:desaturate($color, 20%);
+  $leftPos: $leftPos + 100;
+
+}
+
+.mix{
+  @include base($leftPos, $topPos);
+  background-color:mix(#ffff00, #0b97c4);
+  $leftPos: $leftPos + 100;
+}

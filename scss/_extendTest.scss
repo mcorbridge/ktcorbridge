@@ -1,0 +1,30 @@
+
+.btn-x{
+	background: #777;
+	border: 1px solid #ccc;
+	font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-z{
+	@extend .btn-x;
+	background: #ff0;
+}
+
+// placeholder
+%btn-p{
+  background: chartreuse;
+  border: 1px solid #3c510c;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.btn-q{
+  @extend %btn-p;
+  background: crimson;
+}
+
+btn-i{
+  @extend %btn-p;
+  text-transform: uppercase;
+}

@@ -1,0 +1,52 @@
+@mixin box-sizing($x:border-box){
+  -webkit-box-sizing: $x;
+  -moz-box-sizing: $x;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  box-sizing: $x;
+}
+
+@mixin transition($val...){
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  transition: color $val;
+}
+
+@mixin button($radius, $color){
+	border-radius: $radius;
+	color:$color;
+}
+
+@mixin highlight($color, $side){
+  border-#{$side}-color:$color;
+}
+
+.contentBox{
+  @include box-sizing;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.callout{
+  @include box-sizing(content-box);
+  border: 1px solid #41a39f;
+}
+
+// list of arguments
+.btn-a{
+  @include button(10px, #3c510c);
+}
+
+.btn-b{
+  @include transition(color 5s ease-in, background 1s ease-out);
+}
+
+.div-test{
+  border: 3px solid;
+  @include highlight(#41a39f,top) ;
+  @include highlight(#41a39f,left) ;
+  @include highlight(#41a39f,bottom) ;
+  @include highlight(#41a39f,right) ;
+
+
+}

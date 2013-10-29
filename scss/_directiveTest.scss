@@ -1,0 +1,69 @@
+
+//vars
+$theme: dark;
+
+// functions
+@function fluidsize($target, $context){
+	@return ($target / $context) * 100%;
+}
+
+.sidebar{
+  width:fluidsize(350px, 1000px);
+}
+
+/* @if comparisons: ==, !=, >, >=, <, <=  */
+
+header{
+  @if $theme == dark {
+	background: #000;
+  } @else if $theme == pink {
+	background: palevioletred;
+  } @else {
+	 background: #fff;
+  }
+}
+
+$players: PatriceBergeron, ZdenoChara, ToryKrug, BradMarchand;
+
+@each $player in $players {
+  .player-#{player}{
+	background: url(#{$player}.png)
+  }
+}
+
+%itemBorder{
+  border:  3px solid #000;
+  height: 100px;
+  width: 100px;
+}
+
+@mixin itemBorder($height, $width, $color:#000, $bgcolor: #000){
+  	position: absolute;
+ 	border: solid 3px ;
+ 	height: $height;
+  	width: $width;
+  	color: $color;
+	background-color: $bgcolor;
+}
+
+$colors: #0d3349 chartreuse #cc0000 #8A6343 antiquewhite goldenrod orangered cornflowerblue darkolivegreen silver;
+
+$colors-bw: #000000 #ffffff #000000 #ffffff #000000 #ffffff #000000 #ffffff #000000 #ffffff;
+
+@function getColor($i){
+  @return nth($colors, $i);
+}
+
+.item{
+  position: absolute;
+  left: 500px;
+  top:100px;
+  @include itemBorder($height:400px,  $width:400px);
+  @for $i from 1 through 10 {
+		& .item-#{$i} {
+	    top: $i * 30px;
+		left: $i * 30px;
+		@include itemBorder($height:40px,  $width:40px, $bgcolor:getColor($i));
+  	}
+  }
+}

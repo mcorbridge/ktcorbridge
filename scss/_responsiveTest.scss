@@ -1,0 +1,132 @@
+// media queries
+/* this is an example of using media queries  */
+
+// vars
+$break-small: 320px;
+$break-large: 1200px;
+
+
+@mixin respond-to($val, $query){
+  @media ($val:$query) {
+	@content;
+  }
+}
+
+html, body { height: 100%; width: 100%; margin: 0; }
+
+.fooButton{
+  position: absolute;
+  left: 100;
+  top: 100;
+  content: "foo";
+}
+
+.foobar{
+  border: 3px solid greyscale(saturate(complement(goldenrod),100%));
+  float: right;
+  width: 10%;
+  height: 99%;
+  background-color: goldenrod;
+  }
+
+.profile-pic {
+  float: left;
+  width: 250px;
+  @media screen and (max-width: $break-small) {
+	width: 100px;
+	float: none;
+  }
+  @media screen and (min-width: $break-large) {
+	float: right;
+  }
+}
+
+// media query
+@media only screen and (max-device-width: 480px) {
+
+  div#wrapper {
+	width: 400px;
+  }
+
+/* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+  /* Styles */
+  }
+
+/* Smartphones (landscape) ----------- */
+  @media only screen
+  and (min-width : 321px) {
+  /* Styles */
+  }
+
+/* Smartphones (portrait) ----------- */
+  @media only screen
+  and (max-width : 320px) {
+  /* Styles */
+  }
+
+/* iPads (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px) {
+  /* Styles */
+  }
+
+/* iPads (landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+  /* Styles */
+  }
+
+/* iPads (portrait) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+  /* Styles */
+  }
+
+/* Desktops and laptops ----------- */
+  @media only screen
+  and (min-width : 1224px) {
+  /* Styles */
+  }
+
+/* Large screens ----------- */
+  @media only screen
+  and (min-width : 1824px) {
+  /* Styles */
+  }
+
+/* iPhone 4 ----------- */
+  @media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+  }
+
+  div#header {
+	background-image: url(media-queries-phone.jpg);
+	height: 93px;
+	position: relative;
+  }
+
+  div#header h1 {
+	font-size: 140%;
+  }
+
+  #content {
+	float: none;
+	width: 100%;
+  }
+
+  #navigation {
+	float:none;
+	width: auto;
+  }
+
+}
