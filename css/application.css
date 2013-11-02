@@ -298,6 +298,12 @@ html, body {
   /* Styles */ }
 @media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-device-width: 480px) and (min-device-pixel-ratio: 1.5) {
   /* Styles */ }
+.testFileBar {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border: 1px solid #000; }
+
 .foo {
   font-weight: bold;
   font-size: 10px;
